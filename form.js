@@ -28,7 +28,7 @@ class Form{
         this.button.style('width', '200px');
         this.button.style('height', '40px');
 
-        this.story.html("You and your friend decide to go surfing. When you and your friend reached the beach, your friend goes ahead of you as she loves surfing. Your friend decides to go to one island not too far away. Your friend messages you that she reached that island and asks you to collect some fishes and come to the island. Since you're not willing to keep your friend waiting, you decide to fish while surfing.")
+        this.story.html("You and your friend decide to go surfing. When you both reach the beach, your friend goes ahead of you as she loves surfing. She decides to go to one island not too far away and messages you after she reached that island to collect some fishes and come to the island. Since you're not willing to keep her waiting, you decide to fish while surfing.")
         this.story.position(displayWidth-300, displayHeight/2 - 200);
 
         this.instruction1.style('color', 'red');
