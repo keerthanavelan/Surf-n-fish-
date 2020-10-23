@@ -4,12 +4,14 @@ class Form{
         this.story = createElement('h2');
         this.instruction1 = createElement('h1');
         this.instruction2 = createElement('h1');
+        this.instruction3 = createElement('h1');
     }
     hide(){
         this.button.hide();
         this.story.hide();
         this.instruction1.hide();
         this.instruction2.hide();
+        this.instruction3.hide();
     }
     display(){
         //image(title, 0, displayWidth/2, displayHeight/2, 300);
@@ -21,6 +23,9 @@ class Form{
 
         this.instruction2.html("The rocks and sea weed make you lose a life and waves make you lose some fishes");
         this.instruction2.position(displayWidth/2-500, displayHeight/2-50);
+
+        this.instruction3.html("You need to collect 20 fishes and you have only 5 lives.");
+        this.instruction3.position(displayWidth/2-500, displayHeight/2);
 
         noStroke();
         this.button.position(displayWidth/2, displayHeight/2 + 100, 50, 50);
