@@ -61,14 +61,17 @@ function draw(){
     }
 
     else if(gameState === 1){
-        form.score.html("Score: " + score)
+        form.score.html("Score: " + scoreD)
         form.score.position(displayWidth/4-100, displayHeight/4 - 100);
-        form.lives.html("Lives: " + lives)
+        form.lives.html("Lives: " + livesD)
         form.lives.position(displayWidth/4-100, displayHeight/4 - 50);
         game.play();
         form.hide();
         game.score();
         
+        scoreD = score.toFixed();
+        livesD = lives.toFixed();
+
         //backgroundScene = createSprite(displayWidth/2, displayHeight/2, 10, 10);
         backgroundScene.addImage("bg", water);
         backgroundScene.velocityX = -10;
@@ -79,26 +82,30 @@ function draw(){
         
         if(player.isTouching(Rocks_group)){
             score=score-0.1;
-            Math.round(score);
+            Math.round(score * 10)/10;
             console.log(score);
             rock.destroy();
+            score.toFixed(1);
         }
         if(player.isTouching(Fish_group)){
-            score=score+0.2;
-            Math.round(score);
+            score=score+0.1;
+            Math.round(score * 10)/10;
             fish.destroy();
+            score.toFixed(1);
         }
         if(player.isTouching(Waves_group) ){
             lives=lives-0.1;
-            Math.round(lives);
+            Math.round(lives * 10)/10;
             console.log( "lives " + lives);
             waves.destroy();
+            lives.toFixed(1);
         }
         if(player.isTouching(SeaWeed_group)){
             score=score-0.1;
-            Math.round(score);
+            Math.round(score * 10)/10;
             console.log(score);
             seaWeed.destroy();
+            score.toFixed(1);
         }
         if(score<=0){
             score=0;
