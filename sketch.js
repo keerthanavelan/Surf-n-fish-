@@ -22,7 +22,7 @@ function setup(){
     console.log(displayHeight);
     score = 0;
     scoreD = createElement('h2');
-    lives = 3;
+    lives = 5;
 
     backgroundScene = createSprite(displayWidth/2, displayHeight/2, displayWidth, displayHeight);
     backgroundScene.addImage("bg", water);
